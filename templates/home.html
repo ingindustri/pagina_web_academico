@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <!-- Carrusel -->
+    <div id="carrusel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <figure class="text-center">
+                <img src="{% static 'img/imagen2.jpg' %}" class="d-block w-100" alt="Imagen 2" style="height: 400px; object-fit: cover;">
+              <figcaption>ASISTENCIA ADMINISTRATIVA</figcaption>
+              </figure>
+              </div>
+            <div class="carousel-item">
+              <figure class="text-center">
+                <img src="{% static 'img/imagen3.jpg' %}" class="d-block w-100" alt="Imagen 3" style="height: 400px; object-fit: cover;">
+                <figcaption>ELECTRICIDAD INDUSTRIAL</figcaption>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="text-center">
+                <img src="{% static 'img/imagen4.jpg' %}" class="d-block w-100" alt="Imagen 3" style="height: 400px; object-fit: cover;">
+                <figcaption>CONTABILIDAD</figcaption>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="text-center">
+                <img src="{% static 'img/imagen5.jpg' %}" class="d-block w-100" alt="Imagen 3" style="height: 400px; object-fit: cover;">
+                <figcaption>CONSTRUCCIÓN CIVIL</figcaption>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="text-center">
+                <img src="{% static 'img/imagen6.jpg' %}" class="d-block w-100" alt="Imagen 3" style="height: 400px; object-fit: cover;">
+                <figcaption>MECATRÓNICA AUTOMOTRIZ</figcaption>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="text-center">
+                <img src="{% static 'img/imagen7.jpg' %}" class="d-block w-100" alt="Imagen 3" style="height: 400px; object-fit: cover;">
+                <figcaption>PRODUCCIÓN AGROPECUARIA</figcaption>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="text-center">
+                <img src="{% static 'img/imagen8.jpg' %}" class="d-block w-100" alt="Imagen 3" style="height: 400px; object-fit: cover;">
+                <figcaption>MECÁNICA DE PRODUCCIÓN INDUSTRIAL</figcaption>
+              </figure>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Bienvenida -->
+    <section class="text-center mb-5">
+        <h2 class="fw-bold">Bienvenido al Sistema Web Académico del Instituto de Educación Superior Tecnológico Público</h2>
+        <p>Este sistema es una herramienta diseñada para brindar orientación y apoyo a los estudiantes y nuevos ingresantes. Aquí podrás acceder a tus boletas, métodos de pago, informes administrativos e inscripciones virtuales.</p>
+    </section>
+
+    <!-- Información útil en lugar de tarjetas -->
+    <section class="bg-light p-4 rounded mb-4">
+        <h3 class="text-dark">¿Qué puedes hacer en esta plataforma?</h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">📥 Descargar tus boletas informativas y recibos de matrícula.</li>
+            <li class="list-group-item">💳 Realizar pagos de forma segura desde casa.</li>
+            <li class="list-group-item">📊 Visualizar tus informes académicos y administrativos.</li>
+            <li class="list-group-item">📝 Inscribirte virtualmente a cursos o módulos técnicos.</li>
+        </ul>
+    </section>
+
+    <section class="bg-secondary text-white p-4 rounded mb-4">
+        <h3>📢 Noticias recientes</h3>
+        <ul>
+            <li>✔ Se ha habilitado la matrícula virtual para el ciclo 2025-II.</li>
+            <li>✔ Nuevo sistema de seguimiento académico ya está en prueba.</li>
+            <li>✔ Recuerda revisar tus informes antes de realizar el pago de ciclo.</li>
+        </ul>
+    </section>
+
+</div>
+{% endblock %}
+
+
+

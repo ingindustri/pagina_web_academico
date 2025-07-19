@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bienvenido{% endblock %}
+
+{% block content %}
+<div class="text-white text-center p-5" 
+     style="background-image: url('{% static 'img/imagen1.jpg' %}');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            border-radius: 15px;">
+    <h1 class="display-4 fw-bold">Bienvenido al Sistema Académico</h1>
+    <p class="lead">Una plataforma diseñada para apoyar a estudiantes e ingresantes en sus trámites e información académica.</p>
+</div>
+{% endblock %}

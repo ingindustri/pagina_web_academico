@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Pagos{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Información sobre Pagos</h2>
+    <p>En esta sección podrás encontrar información sobre pagos académicos, cronograma y medios habilitados.</p>
+    
+    <div class="text-center mt-4">
+        <a href="{% url 'metodos_pago' %}" class="btn btn-primary">Ver métodos de pago</a>
+    </div>
+</div>
+{% endblock %}

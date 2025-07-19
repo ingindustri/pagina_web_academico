@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Informes Académicos{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center text-primary mb-4">
+        <i class="bi bi-file-earmark-text"></i> Informes Académicos
+    </h2>
+
+    <div class="mb-4 p-4 bg-light rounded shadow-sm">
+        <h4 class="text-success"><i class="bi bi-calendar-check"></i> Matrícula 2025</h4>
+        <ul>
+            <li><strong>Inicio:</strong> 15 de febrero de 2025</li>
+            <li><strong>Cierre:</strong> 15 de marzo de 2025</li>
+            <li><strong>Requisitos:</strong> DNI, ficha de inscripción, pago de matrícula</li>
+        </ul>
+    </div>
+
+    <div class="mb-4 p-4 bg-light rounded shadow-sm">
+        <h4 class="text-danger"><i class="bi bi-credit-card-2-back"></i> Medios de Pago</h4>
+        <ul>
+            <li><strong>Presencial:</strong> Caja del Instituto</li>
+            <li><strong>Transferencia:</strong> Banco de la Nación, código 123-456789</li>
+            <li><strong>Pago virtual:</strong> Sistema online con código de estudiante</li>
+        </ul>
+    </div>
+
+    <div class="mb-4 p-4 bg-light rounded shadow-sm">
+        <h4 class="text-warning"><i class="bi bi-journal-text"></i> Ciclos de Estudio</h4>
+        <ul>
+            <li><strong>Ciclo I:</strong> Marzo - Julio</li>
+            <li><strong>Ciclo II:</strong> Agosto - Diciembre</li>
+        </ul>
+    </div>
+
+    <div class="mb-4 p-4 bg-light rounded shadow-sm">
+        <h4 class="text-info"><i class="bi bi-laptop"></i> Inscripciones Virtuales</h4>
+        <p>Los estudiantes pueden inscribirse desde el portal institucional o en la oficina de Secretaría Académica.</p>
+    </div>
+
+    <div class="mb-4 p-4 bg-light rounded shadow-sm">
+        <h4 class="text-dark"><i class="bi bi-envelope"></i> Contacto</h4>
+        <p>Correo: <strong>secretaria@instituto.edu.pe</strong></p>
+        <p>Teléfono: <strong>(01) 234-5678</strong></p>
+    </div>
+
+    <!-- Botón para descargar guía -->
+    <div class="text-center mt-5">
+        <a href="{% static 'pdf/guia_matricula.pdf' %}" class="btn btn-outline-primary" target="_blank">
+            <i class="bi bi-download"></i> Descargar Guía de Matrícula (PDF)
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+

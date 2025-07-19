@@ -1,0 +1,91 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sistema Académico{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll; /* 🔽 Agrega scroll vertical */
+        }
+        body {
+            background-image: url("{% static 'img/imagen1.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .contenido {
+            background-color: rgba(19, 91, 119, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 100px; /* 🔽 Separación del navbar fijo */
+        }
+    </style>
+</head>
+<body>
+    <!-- 🔽 Navbar fijo -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Sistema Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/boletas/">Boletas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pagos/">Pagos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/informes/">Informes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/inscripciones/">Inscripciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🔽 Contenido principal -->
+    <main class="container contenido">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Botón flotante "Ir arriba" -->
+<button onclick="scrollToTop()" id="btnTop" title="Ir arriba" class="btn btn-primary position-fixed bottom-0 end-0 m-4" style="display: none;">
+    ↑
+</button>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-auto w-100">
+    <small>&copy; 2025 Sistema Web Académico - Todos los derechos reservados</small>
+</footer>
+
+<!-- Script para mostrar el botón al hacer scroll -->
+<script>
+    const btnTop = document.getElementById("btnTop");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            btnTop.style.display = "block";
+        } else {
+            btnTop.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
+

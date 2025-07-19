@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Historial de Pagos{% endblock %}
+{% block content %}
+<h3 class="text-center">Historial de Comprobantes Subidos</h3>
+<ul class="list-group mt-4">
+    {% for pago in pagos %}
+    <li class="list-group-item">
+        {{ pago.estudiante }} - <a href="{{ pago.archivo.url }}" target="_blank">Ver archivo</a> ({{ pago.fecha_subida|date:"d/m/Y H:i" }})
+    </li>
+    {% empty %}
+    <li class="list-group-item">No hay comprobantes registrados aún.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
