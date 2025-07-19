@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: pagina-web-academico
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn sistema_web_academico.wsgi
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: sistema_web_academico.settings
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
