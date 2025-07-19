@@ -1,28 +1,37 @@
-# Byte-compiled / optimized / DLL files
+# Entornos virtuales
+venv/
+.env/
+*.env
+
+# Archivos de Python
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Django stuff:
-*.log
-*.pot
-*.pyc
+# Archivos de base de datos
 *.sqlite3
-db.sqlite3
 
-# VS Code
+# Archivos de configuración de IDEs/editores
 .vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# Python environment
-env/
-venv/
-ENV/
-*.env
-
-# OS files
+# Archivos del sistema operativo
 .DS_Store
 Thumbs.db
 
-# Static/media (opcional)
+# Archivos de logs y dumps
+*.log
+*.pot
+*.pyc
+
+# Archivos estáticos compilados (opcional)
 staticfiles/
+static_root/
 media/
+
+# Archivos Excel u otros documentos temporales
+*.xlsx
+*.xls
+
